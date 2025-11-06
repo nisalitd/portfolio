@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>6-DoF Motion Platform — Hand-Pose Mirrored Simulation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload project-detail">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+                                <a href="index.html#stewart" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+								<header class="major">
+									<span class="date"></span>
+									<h1>Stewart Platform with Hand-Pose Mirroring for Immersive 6-DoF Motion Simulation</h1>
+									<ul class="actions special section-tabs">
+										<li><a href="#demo" class="button scrolly">Demo</a></li>
+										<li><a href="#skills" class="button scrolly">Skills</a></li>
+										<li><a href="#presentation" class="button scrolly">Presentation</a></li>
+									</ul>
+								</header>
+
+								<div class="project-section" id="overview">
+									<h2 class="section-title">OVERVIEW</h2>
+									<p class="section-text">
+										This project presents a rotary-actuated 6-DoF motion platform designed for intuitive, pose-mirroring control using real-time hand tracking. The full-scale design was developed to support the payload of a human occupant, while a reduced-scale prototype was fabricated to experimentally validate the control architecture and motion behavior. The mechanism employs an optimized 6-6 parallel geometry with rotary–spherical–spherical joints, refined through sensitivity and genetic-algorithm analysis to maximize workspace and ensure ergonomic operation. Structural and topology optimization improved stiffness-to-weight performance, while torque analysis under extreme load cases guided actuator selection. Vision-based control extracts 6-DoF hand pose via a CNN tracker and maps it to actuator angles through a custom inverse-kinematics solver supporting three coordinate-mapping modes. A modular MQTT framework and web-based GUI coordinate vision, computation, and actuation, enabling smooth, real-time multi-mode motion for immersive simulation and human-in-the-loop control.
+									</p>
+								</div>
+
+								<!-- Demonstration -->
+								<div class="project-section" id="demo">
+									<h2 class="section-title">DEMONSTRATION</h2>
+
+									<!-- Prototype Validation -->
+									<h3 class="section-subtitle" style="margin-top:2rem; margin-bottom:0.6rem;">Prototype Validation</h3>
+									<div class="two-col" style="--left-flex:1; --right-flex:1;">
+										<!-- LEFT (Automatic Mode) -->
+										<div class="left">
+											<div class="video-container">
+												<video class="video main" autoplay muted loop playsinline controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture>
+													<source src="videos/prototype_auto.mp4" type="video/mp4">
+												</video>
+												<div class="replay-overlay">
+													<i class="icon solid fa-redo"></i>
+												</div>
+											</div>
+											<p class="section-text" style="text-align:center; margin-top:0.5rem;">Automatic Mode</p>
+										</div>
+
+										<!-- RIGHT (Manual Mode) -->
+										<div class="right">
+											<div class="video-container">
+												<video class="video main" autoplay muted loop playsinline controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture>
+													<source src="videos/prototype_manual.mp4" type="video/mp4">
+												</video>
+												<div class="replay-overlay">
+													<i class="icon solid fa-redo"></i>
+												</div>
+											</div>
+											<p class="section-text" style="text-align:center; margin-top:0.5rem;">Manual Mode</p>
+										</div>
+									</div>
+
+									<!-- GUI Demonstration -->
+									<h3 class="section-subtitle" style="margin-bottom: 0.6rem;">Graphical User Interface</h3>
+									<div class="two-col" style="--left-flex:1; --right-flex:1;">
+										<!-- LEFT (Automatic Mode) -->
+										<div class="left">
+											<div class="video-container">
+												<video class="video main" autoplay muted loop playsinline controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture>
+													<source src="videos/gui_auto.mp4" type="video/mp4">
+												</video>
+												<div class="replay-overlay">
+													<i class="icon solid fa-redo"></i>
+												</div>
+											</div>
+											<p class="section-text" style="text-align:center; margin-top:0.5rem;">Automatic Mode</p>
+										</div>
+
+										<!-- RIGHT (Manual Mode) -->
+										<div class="right">
+											<div class="video-container">
+												<video class="video main" autoplay muted loop playsinline controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture>
+													<source src="videos/gui_manual.mp4" type="video/mp4">
+												</video>
+												<div class="replay-overlay">
+													<i class="icon solid fa-redo"></i>
+												</div>
+											</div>
+											<p class="section-text" style="text-align:center; margin-top:0.5rem;">Manual Mode</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Key Technical Skills -->
+								<div class="project-section" id="skills">
+									<h2 class="section-title">KEY TECHNICAL SKILLS</h2>
+
+									<div class="skills-container">
+										<!-- LEFT -->
+										<div class="skills-left">
+											<ul class="tech-list">
+												<li>Kinematic modeling & inverse kinematics (MATLAB / Simulink)</li>
+												<li>Workspace & sensitivity analysis using parameter sweeps</li>
+												<li>Genetic algorithm optimization</li>
+												<li>6-DoF hand-pose estimation using CNN-based vision (OpenCV / MediaPipe)</li>
+												<li>Topology & structural optimization (SolidWorks / ANSYS)</li>
+											</ul>
+										</div>
+
+										<!-- RIGHT -->
+										<div class="skills-right">
+											<ul class="tech-list">
+												<li>Torque & dynamic analysis (SolidWorks / ADAMS)</li>
+												<li>MQTT-based distributed control (Flask / Paho-MQTT / ESP32)</li>
+												<li>Real-time communication & GUI development (Flask / HTML / JS)</li>
+												<li>Embedded actuation & IMU feedback integration (Arduino / ESP32)</li>
+												<li>Prototype fabrication & performance validation (3D printing / Laser cutting)</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="project-section" id="presentation">
+										<h2 class="section-title">PROJECT PRESENTATION</h2>
+										<div class="pdf-container">
+											<iframe
+												src="https://drive.google.com/file/d/172E6UTxmsHCJXl4YVJshzgQny7p-8Wj9/preview"
+												allow="autoplay"
+												scrolling="no">
+											</iframe>
+										</div>
+									</div>
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+						</section>
+						<section class="split contact">
+                            <a href="index.html#nav" class="home-icon">
+                                <i class="fas fa-home"></i>
+                            </a>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				// Universal replay + scroll autoplay for all videos
+				const videos = document.querySelectorAll('video.video.main');
+
+				videos.forEach(video => {
+					const overlay = video.parentElement.querySelector('.replay-overlay');
+
+					// Restart when scrolled into view
+					const observer = new IntersectionObserver(entries => {
+					if (entries[0].isIntersecting) {
+						video.currentTime = 0;
+						video.play();
+					}
+					}, { threshold: 0.6 });
+					observer.observe(video);
+
+					// Replay when overlay is clicked
+					if (overlay) {
+					overlay.addEventListener('click', () => {
+						video.currentTime = 0;
+						video.play();
+					});
+					}
+				});
+			</script>
+	</body>
+</html>

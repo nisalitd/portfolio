@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>VEXEL — Autonomous Agricultural Robot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload project-detail">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+                                <a href="index.html#vexel" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+								<header class="major">
+									<span class="date"></span>
+									<h1>VEXEL: An Autonomous Mobile Robotic Manipulator for Smart Agriculture</h1>
+									<ul class="actions special section-tabs">
+										<li><a href="#overview" class="button scrolly">Project</a></li>
+										<li><a href="#demo" class="button scrolly">Demo</a></li>
+										<li><a href="#skills" class="button scrolly">Skills</a></li>
+									</ul>
+								</header>
+
+								<div class="project-section" id="overview">
+									<h2 class="section-title">OVERVIEW</h2>
+									<p class="section-text">
+										VEXEL is an autonomous mobile robotic manipulator designed for disease detection and targeted spraying in confined polytunnel environments. The platform integrates a 4-wheel mobile base for navigation, a 3-DoF Cartesian manipulator for canopy-level positioning, and a 2-DoF gimbal-mounted end effector for orientation-controlled sensing and spraying. Perception is enabled through an RGB + NIR multispectral perception pipeline that supports NDVI-based stress detection, Random Forest classification of bacterial leaf spot, and color-based segmentation of mealybugs. A dual-nozzle spraying unit delivers both upward abaxial coverage and localized or wide-angle foliar treatment. Autonomy is coordinated through a ROS 2 stack combining SLAM Toolbox and Nav2, enabling mapping, waypoint traversal, and plant-wise scan → detect → spray execution without operator intervention.
+									</p>
+								</div>
+
+								<div class="project-section">
+									<h2 class="section-title">SYSTEM ARCHITECTURE</h2>
+
+									<div class="sys-arch-container">
+
+										<!-- LEFT SIDE (TEXT + TABLE) -->
+										<div class="sys-arch-left">
+											<p class="section-text">
+												The robot integrates three coordinated subsystems:
+											</p>
+
+											<table>
+												<tbody>
+													<tr>
+														<td>4-wheel Mobile Base</td>
+														<td>Navigates narrow aisles, maintains stability over uneven soil</td>
+													</tr>
+													<tr>
+														<td>3-DoF Cartesian Manipulator</td>
+														<td>Positions the end effector across the canopy envelope</td>
+													</tr>
+													<tr>
+														<td>2-DoF Gimbal End Effector</td>
+														<td>Houses dual cameras + dual nozzles for sensing and spraying</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<!-- RIGHT SIDE (IMAGE) -->
+										<div class="sys-arch-right">
+											<img src="images/system_architecture.jpg" alt="System Architecture Diagram">
+										</div>
+
+									</div>
+								</div>
+
+								<div class="project-section">
+									<h2 class="section-title">PERCEPTION & DISEASE DETECTION</h2>
+
+									<div class="perc-container">
+
+										<!-- LEFT SIDE (TEXT + TABLE) -->
+										<div class="perc-left">
+											<p class="section-text">
+												The perception system uses RGB + NIR multispectral imaging to analyse plant health:
+											</p>
+
+											<table>
+												<tbody>
+													<tr>
+														<td>NDVI</td>
+														<td>Detects early-stage stress before visible symptoms</td>
+													</tr>
+													<tr>
+														<td>Random Forest <br />
+															(HOG features)</td>
+														<td>Classifies bacterial leaf spot</td>
+													</tr>
+													<tr>
+														<td>Color segmentation</td>
+														<td>Identifies mealybug clusters</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<!-- RIGHT SIDE (IMAGE) -->
+										<div class="perc-right">
+											<img src="images/perception.jpg" alt="System Architecture Diagram">
+										</div>
+
+									</div>
+								</div>
+
+								<div class="project-section">
+									<h2 class="section-title">SPRAYING MECHANISM</h2>
+
+									<div class="spray-container">
+
+										<!-- LEFT SIDE (TEXT + TABLE) -->
+										<div class="spray-left">
+											<p class="section-text">
+												Spraying is performed via a dual-nozzle mechanism and triggered automatically when disease is detected during the scan cycle:
+											</p>
+
+											<table>
+												<tbody>
+													<tr>
+														<td>Upward-facing multi-orifice</td>
+														<td>Treats undersides of leaves (mealybugs)</td>
+													</tr>
+													<tr>
+														<td>Swirl atomizer (adjustable, 30°–120°)</td>
+														<td>Localized disease control and general foliar spraying</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<!-- RIGHT SIDE (IMAGE) -->
+										<div class="spray-right">
+											<img src="images/spray.png" alt="System Architecture Diagram">
+										</div>
+
+									</div>
+								</div>
+
+								<div class="project-section">
+									<h2 class="section-title">CONTROL & AUTONOMY</h2>
+
+									<div class="control-container">
+
+										<!-- LEFT SIDE (TEXT + TABLE) -->
+										<div class="control-left">
+											<table>
+												<tbody>
+													<tr>
+														<td>Navigation</td>
+														<td>ROS 2 Nav2 stack with SLAM-based mapping and waypoint traversal</td>
+													</tr>
+													<tr>
+														<td>Scan Cycles</td>
+														<td>Three scan types: Mealybug (upward) • Leaf-spot (bidirectional) • General (uniform)</td>
+													</tr>
+													<tr>
+														<td>Pause–Scan-Spray–Resume</td>
+														<td>Robot halts at each plant, executes the scan cycle, triggers spraying if disease is detected, resumes motion</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<!-- RIGHT SIDE (IMAGE) -->
+										<div class="control-right">
+											<img src="images/scan.jpg" alt="System Architecture Diagram">
+										</div>
+
+									</div>
+								</div>
+
+								<div class="project-section">
+									<h2 class="section-title" id="demo">DEMONSTRATION</h2>
+
+									<div class="video-container">
+										<video class="video main" id="vexelVideo" autoplay muted loop playsinline controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture>
+											<source src="videos/vexel_demo.mp4" type="video/mp4">
+										</video>
+										<div class="replay-overlay" id="replayOverlay">
+											<i class="icon solid fa-redo"></i>
+										</div>
+									</div>
+								</div>
+
+								<!-- Key Technical Skills -->
+								<div class="project-section" id="skills">
+									<h2 class="section-title">KEY TECHNICAL SKILLS</h2>
+
+									<div class="skills-container">
+										<!-- LEFT -->
+										<div class="skills-left">
+											<ul class="tech-list">
+												<li>ROS 2 (SLAM Toolbox, Nav2)</li>
+												<li>C++ / Python (real-time control)</li>
+												<li>Computer Vision & ML (NDVI, Random Forest)</li>
+												<li>Multispectral sensing & sensor fusion (RGB / NIR / LiDAR)</li>
+												<li>Embedded control (Raspberry Pi / Jetson / Arduino)</li>
+											</ul>
+										</div>
+
+										<!-- RIGHT -->
+										<div class="skills-right">
+											<ul class="tech-list">
+												<li>Motion planning & kinematics (3-DoF arm + 2-DoF gimbal)</li>
+												<li>Mechatronic system-level integration</li>
+												<li>Multibody simulation (Gazebo / MATLAB / Simulink)</li>
+												<li>Distributed control & real-time communication</li>
+												<li>Prototyping & full-system validation</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+						</section>
+						<section class="split contact">
+                            <a href="index.html#nav" class="home-icon">
+                                <i class="fas fa-home"></i>
+                            </a>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				const video = document.getElementById('vexelVideo');
+				const replayButton = document.getElementById('replayOverlay');
+
+				// Restart on scroll into view
+				const observer = new IntersectionObserver(entries => {
+					if (entries[0].isIntersecting) {
+						video.currentTime = 0;
+						video.play();
+					}
+				}, { threshold: 0.6 });
+				observer.observe(video);
+
+				// Replay when overlay is clicked
+				replayButton.addEventListener('click', () => {
+					video.currentTime = 0;
+					video.play();
+				});
+			</script>
+	</body>
+</html>

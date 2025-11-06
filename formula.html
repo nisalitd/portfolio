@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Formula Student Electric — Vehicle Dynamics & Electronics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload project-detail">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+                                <a href="index.html#nav" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+								<header class="major">
+									<span class="date"></span>
+									<h1>Formula Student Electric | Vehicle Dynamics & Electronics</h1>
+									<ul class="actions special section-tabs">
+										<li><a href="#gallery" class="button scrolly">Gallery</a></li>
+										<li><a href="#demo" class="button scrolly">Formula Bharat</a></li>
+									</ul>
+								</header>
+
+								<div class="project-section" id="overview">
+									<h2 class="section-title">OVERVIEW</h2>
+									<p class="section-text">
+										This page documents contributions to Team Falcon E Racing, Sri Lanka’s first Formula Student electric vehicle team. As a Vehicle Dynamics and Electronics Engineer, the work spanned full-vehicle simulation, telemetry, and energy systems for the Falcon E2 race car. Responsibilities included developing tire and vehicle models in MATLAB/Simulink for lap-time and handling optimization, implementing a real-time data acquisition and telemetry stack, and leading HV battery pack design and assembly of Sri Lanka’s first 600 V Li-Po traction battery. The work combined system-level integration, on-track validation, and competition-grade documentation across mechanical, electrical, and control domains.
+									</p>
+								</div>
+
+								<div class="project-section">
+									<h2 class="section-title">Key Contributions</h2>
+
+                                    <ul class="section-text key-contrib-list">
+                                        <li>Developed full tire and vehicle models for Falcon E2 using MATLAB/Simulink.</li>
+                                        <li>Optimized steering geometry for improved handling and lap-time performance.</li>
+                                        <li>Designed and implemented a multi-channel data acquisition and telemetry system.</li>
+                                        <li>Contributed to 600 V Li-Po traction battery assembly and HV/LV system integration.</li>
+                                        <li>Conducted vehicle testing, data analysis, and performance correlation.</li>
+                                        <li>Prepared competition-grade documentation and cost event BOMs.</li>
+                                    </ul>
+								</div>
+
+                                <div class="project-section" id="overview">
+									<h2 class="section-title">Public Outreach</h2>
+									<p class="section-text">
+										Represented Team Falcon E Racing at national exhibitions including TECHNO 2023/2024, the Colombo EV Motor Show 2024, and Sahasak Nimawum 2025, promoting student innovation in electric mobility.
+									</p>
+								</div>
+
+                                <div class="project-section">
+									<h2 class="section-title">Key Technical Skills</h2>
+
+                                    <ul class="section-text key-contrib-list">
+                                        <li>Vehicle and tire modeling (MATLAB / Simulink)</li>
+                                        <li>Real-time telemetry and data acquisition (DAQ / CAN / Python)</li>
+                                        <li>Steering geometry optimization and performance tuning</li>
+                                        <li>High-voltage battery design and assembly (600 V Li-Po)</li>
+                                        <li>System integration, wiring, and fault isolation (LV / HV)</li>
+                                        <li>Competition documentation and cost analysis</li>
+                                    </ul>
+								</div>
+
+                                <!-- Image Gallery -->
+                                <div class="project-section" id="gallery">
+                                    <h2 class="section-title">GALLERY</h2>
+
+                                    <div class="image-gallery">
+                                        <img src="images/falcon_1.jpg" alt="#">
+                                        <img src="images/falcon_2.jpg" alt="#">
+                                        <img src="images/falcon_3.jpg" alt="#">
+                                        <img src="images/falcon_4.jpg" alt="#">
+                                        <img src="images/falcon_5.jpg" alt="#">
+                                        <img src="images/falcon_6.jpg" alt="#">
+                                        <img src="images/falcon_7.jpg" alt="#">
+                                        <img src="images/falcon_8.jpg" alt="#">
+                                        <img src="images/falcon_9.jpg" alt="#">
+                                    </div>
+                                </div>
+
+								<div class="project-section">
+									<h2 class="section-title" id="demo">Formula Bharat 2024</h2>
+
+									<div class="video-container">
+										<video class="video main" id="vexelVideo" autoplay muted loop playsinline controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture>
+											<source src="videos/fs-bharat2024.mp4" type="video/mp4">
+										</video>
+										<div class="replay-overlay" id="replayOverlay">
+											<i class="icon solid fa-redo"></i>
+										</div>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+						</section>
+						<section class="split contact">
+                            <a href="index.html#nav" class="home-icon">
+                                <i class="fas fa-home"></i>
+                            </a>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				const video = document.getElementById('vexelVideo');
+				const replayButton = document.getElementById('replayOverlay');
+
+				// Restart on scroll into view
+				const observer = new IntersectionObserver(entries => {
+					if (entries[0].isIntersecting) {
+						video.currentTime = 0;
+						video.play();
+					}
+				}, { threshold: 0.6 });
+				observer.observe(video);
+
+				// Replay when overlay is clicked
+				replayButton.addEventListener('click', () => {
+					video.currentTime = 0;
+					video.play();
+				});
+			</script>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                const galleryImages = document.querySelectorAll(".image-gallery img");
+
+                galleryImages.forEach(img => {
+                    img.addEventListener("click", () => {
+                    const popup = document.createElement("div");
+                    popup.classList.add("image-popup");
+                    popup.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+                    document.body.appendChild(popup);
+
+                    // Close popup when clicked
+                    popup.addEventListener("click", () => popup.remove());
+                    });
+                });
+                });
+            </script>
+
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dual-Tunable Optical Grating — MEMS-Based Actuation Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload project-detail">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+                                <a href="index.html#mems" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+								<header class="major">
+									<span class="date"></span>
+									<h1>Dual-Tunable MEMS Diffraction Grating with Decoupled Pitch and Blaze Angle Control</h1>
+									<ul class="actions special section-tabs">
+										<li><a href="#skills" class="button scrolly">Skills</a></li>
+										<li><a href="#presentation" class="button scrolly">Presentation</a></li>
+									</ul>
+								</header>
+
+								<div class="project-section" id="overview">
+									<h2 class="section-title">OVERVIEW</h2>
+									<p class="section-text">
+										This project presents a dual-tunable MEMS diffraction grating capable of independent control of pitch and blaze angle for adaptive optical systems. The design introduces a decoupled actuation architecture that combines electrostatic comb-drive pitch tuning with a prism-dimple vertical-field mechanism for blaze control, enabling pure rotational motion while suppressing pull-in instability. Co-moving per-slat electrodes eliminate stiction during translation and permit localized voltage adjustment to maintain uniformity across the array. Finite element simulations in COMSOL verified uniform 0–608 nm pitch tuning at ≤55 V and 0–7.9° blaze tuning at ≤115 V, achieving roughly fourfold improvement over prior dual-mode designs. Modal analysis confirmed high dynamic stiffness (~7.2 kHz) suitable for stable, high-speed optical operation. The structure was optimized for combined bulk–surface micromachining using anisotropic single-crystal silicon and polysilicon layers, supporting scalable fabrication and high diffraction efficiency for tunable spectroscopy and optical communication applications.
+									</p>
+                                    <!-- Full-span image -->
+                                    <div class="full-image">
+                                        <img src="images/mems.jpg" alt="Dual-Tunable MEMS Diffraction Grating Overview">
+                                    </div>
+								</div>
+
+								<!-- Key Technical Skills -->
+								<div class="project-section" id="skills">
+									<h2 class="section-title">KEY TECHNICAL SKILLS</h2>
+
+									<div class="skills-container">
+										<!-- LEFT -->
+										<div class="skills-left">
+											<ul class="tech-list">
+												<li>Electrostatic actuator design and analytical modeling</li>
+												<li>COMSOL Multiphysics simulation of electro-mechanical coupling</li>
+											</ul>
+										</div>
+
+										<!-- RIGHT -->
+										<div class="skills-right">
+											<ul class="tech-list">
+												<li>Parametric optimization of pitch and blaze actuation geometry</li>
+												<li>Process-level structural modeling for MEMS design validation</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="project-section" id="presentation">
+										<h2 class="section-title">PROJECT PRESENTATION</h2>
+										<div class="pdf-container">
+											<iframe
+												src="https://drive.google.com/file/d/1FzKZeAP62AScRnx0C7IagauNa9HsXSbL/preview"
+												allow="autoplay"
+												scrolling="no">
+											</iframe>
+										</div>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+						</section>
+						<section class="split contact">
+                            <a href="index.html#nav" class="home-icon">
+                                <i class="fas fa-home"></i>
+                            </a>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				// Universal replay + scroll autoplay for all videos
+				const videos = document.querySelectorAll('video.video.main');
+
+				videos.forEach(video => {
+					const overlay = video.parentElement.querySelector('.replay-overlay');
+
+					// Restart when scrolled into view
+					const observer = new IntersectionObserver(entries => {
+					if (entries[0].isIntersecting) {
+						video.currentTime = 0;
+						video.play();
+					}
+					}, { threshold: 0.6 });
+					observer.observe(video);
+
+					// Replay when overlay is clicked
+					if (overlay) {
+					overlay.addEventListener('click', () => {
+						video.currentTime = 0;
+						video.play();
+					});
+					}
+				});
+			</script>
+	</body>
+</html>
